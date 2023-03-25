@@ -6,6 +6,8 @@ import './posts.css'
 
 const PostsLists = () => {
 
+
+
     const [posts, setPosts] = useState<IPostsLists[]>([])
     const [currentPage, setCurrentPage] = useState(1);
     const [postsPerPage, setPostsPerPage] = useState(10);
@@ -42,7 +44,7 @@ const PostsLists = () => {
                     <div className="posts" key={post.id}>
                         <h2>{post.title}</h2>
                         <p>{post.body}</p>
-                        <Link to={`/comments/${post.id}`} className="post_btn">Ver mais</Link>
+                        <Link to={`/post/${post.id}/comments`} className="post_btn">Ver mais</Link>
                     </div>
                 ))
 

@@ -4,6 +4,7 @@ import './navbar.css'
 const Navbar = () => {
     return (
         <nav className="navBar">
+
             <h2>
                 <Link to={'/'}>“List posts”</Link>
             </h2>
@@ -12,7 +13,10 @@ const Navbar = () => {
                     <Link to={`/`}>Home</Link>
                 </li>
                 <li>
-                    <Link to={`/`} className="new_post">Novo Post</Link>
+                    <Link to={`/users`}>Users</Link>
+                </li>
+                <li>
+                    <Link to={`/newpost`} className="new_post">New Post</Link>
                 </li>
             </ul>
         </nav>

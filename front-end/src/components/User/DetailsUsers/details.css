@@ -1,0 +1,30 @@
+.user-details {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #111e36;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.loading {
+    font-size: 18px;
+    text-align: center;
+}

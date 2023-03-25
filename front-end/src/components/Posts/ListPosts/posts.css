@@ -1,16 +1,18 @@
 .postsLists {
     margin: 1rem;
+
 }
 
 
 .posts {
     display: flex;
     flex-direction: column;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem;
-    padding: 1rem;
-    border-radius: 1rem;
-    border: 1px solid #007bff;
+    background-color: #111e36;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-bottom: 20px;
+
 }
 
 .posts h2::first-letter {
@@ -18,7 +20,7 @@
 }
 
 .post_btn {
-    background-color: #007bff;
+    background-color: #a1f890e1;
     color: #fff;
     border: 1px solid #fff;
     opacity: 1;
@@ -32,7 +34,7 @@
 }
 
 .post_btn:hover {
-    background-color: #02657e;
+    background-color: #111e36;
 }
 
 
@@ -62,9 +64,9 @@
 }
 
 .pagination button.active {
-    background-color: #007bff;
+    background-color: #111e36;
     color: #fff;
-    border-color: #007bff;
+
 }
 
 .pagination button:first-child {

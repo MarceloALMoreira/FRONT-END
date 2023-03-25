@@ -1,5 +1,6 @@
 import Navbar from "../../components/Home/Navbar"
-import PostsLists from "../../components/Home/Posts"
+import PostsLists from "../../components/Posts/ListPosts"
+import NewPost from "../../components/Home/Newposts"
 import Search from "../../components/Home/Search"
 
 const Home = () => {
@@ -15,11 +16,9 @@ const Home = () => {
             {/* Search */}
             <Search />
 
-
             {/* Posts List */}
             <PostsLists />
 
-            {/* Footer */}
 
         </div>
     )
