@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
-import './details.css'
 import { useParams } from 'react-router-dom';
 import { IUserDetails } from '../../../interfaces/IUserDetails';
 import { IUser } from '../../../interfaces/IUers';
 import listFetch from '../../../axios/config';
+
+import './details.css'
 
 
 
@@ -32,8 +32,6 @@ const UserDetails: React.FC<IUserDetails> = () => {
         <div>
             <div className='user-details'>
                 <h2>{user.name}</h2>
-
-                <p><strong>Username:</strong> {user.id}</p>
                 <p><strong>Username:</strong> {user.username}</p>
                 <p><strong>E-mail:</strong> {user.email}</p>
                 <p><strong>Telefone:</strong> {user.phone}</p>

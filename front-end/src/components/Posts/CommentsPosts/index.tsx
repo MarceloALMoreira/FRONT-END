@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
-import './commentlist.css'
 import { useParams } from 'react-router-dom';
 import { IComment } from '../../../interfaces/IComments';
 import { IPost } from '../../../interfaces/IPosts';
 import listFetch from '../../../axios/config';
+
+import './commentlist.css'
 
 
 const CommentsLis: React.FC<IPost> = () => {
@@ -39,7 +40,9 @@ const CommentsLis: React.FC<IPost> = () => {
                     <div className="Comment" key={comment.id}>
                         <div className="Comment__header">
                             <span className="Comment__author">{comment.name}</span>
-                            <span className="Comment__email">{comment.email}</span>
+                        </div>
+                        <div>
+                            <p className="Comment__email">{comment.email}</p>
                         </div>
                         <div className="Comment__body">{comment.body}</div>
                     </div>

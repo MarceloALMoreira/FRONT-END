@@ -23,12 +23,14 @@
 }
 
 .Comment__author {
+    border-bottom: 1px solid #ccd6ea;
     font-weight: bold;
     margin-right: 10px;
 }
 
 .Comment__email {
     font-style: italic;
+    display: flex;
     color: #999;
 }
 

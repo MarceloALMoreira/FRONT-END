@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import axios from 'axios';
-import './newposts.css'
 import listFetch from '../../../axios/config';
 
+import './newposts.css'
 interface FormData {
     title: string;
     body: string;
@@ -53,3 +52,6 @@ const NewPost = () => {
 }
 
 export default NewPost;
+
+
+// Esse Componente não está persistindo! Foi feito dessa forma apenas como exemplo para algo real.

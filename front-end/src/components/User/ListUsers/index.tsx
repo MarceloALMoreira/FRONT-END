@@ -1,20 +1,15 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
-import './uselist.css'
 import { Link } from 'react-router-dom';
 import listFetch from '../../../axios/config';
+import { IUser } from '../../../interfaces/IUers';
 
-interface User {
-    id: number;
-    name: string;
-    username: string;
-    email: string;
-    phone: string;
-    website: string;
-}
+import './uselist.css'
+
+
+
 
 const UserList = () => {
-    const [users, setUsers] = useState<User[]>([]);
+    const [users, setUsers] = useState<IUser[]>([]);
 
     useEffect(() => {
         listFetch.get('users')

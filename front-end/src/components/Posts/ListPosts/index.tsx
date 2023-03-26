@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import axios from 'axios';
 import { IPostsLists } from "../../../interfaces/IPostsLists";
-import './posts.css'
 import listFetch from "../../../axios/config";
+
+import './posts.css'
+
+
 
 const PostsLists = () => {
 
-
-
     const [posts, setPosts] = useState<IPostsLists[]>([])
     const [currentPage, setCurrentPage] = useState(1);
-    const [postsPerPage, setPostsPerPage] = useState(10);
+    const [postsPerPage, setPostsPerPage] = useState(15);
 
     const getPosts = async () => {
         try {
