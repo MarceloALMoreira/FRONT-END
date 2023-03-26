@@ -40,9 +40,6 @@ const CommentsList: React.FC<Props> = ({ postId }) => {
 
     return (
         <div className="">
-            <Navbar />
-
-
             <div className="CommentList">
                 <h2>Lista de Comentários:</h2>
                 {comments.map(comment => (

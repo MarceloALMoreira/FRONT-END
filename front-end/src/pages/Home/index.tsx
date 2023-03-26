@@ -10,8 +10,6 @@ const Home = () => {
             {/* Todos os components já vem com estilos */}
 
 
-            {/* Header */}
-            <Navbar />
 
             {/* Search */}
             <Search />

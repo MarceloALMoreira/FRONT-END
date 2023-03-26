@@ -5,6 +5,7 @@ import Home from "./pages/Home"
 import UserDetails from "./components/User/DetailsUsers"
 import UserList from "./components/User/ListUsers"
 import NewPost from "./components/Home/Newposts"
+import Navbar from "./components/Home/Navbar"
 
 
 function MeuComponente() {
@@ -17,6 +18,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <Navbar />
       <Routes>
         <Route>
           <Route index element={< Home />} />

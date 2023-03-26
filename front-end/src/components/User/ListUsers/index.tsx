@@ -24,10 +24,6 @@ const UserList = () => {
 
     return (
         <div>
-            <div>
-                <Navbar />
-            </div>
-
 
             <div className="user-list">
                 <ul>

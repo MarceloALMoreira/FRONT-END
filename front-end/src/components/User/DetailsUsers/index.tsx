@@ -34,7 +34,6 @@ const UserDetails = ({ userId }: Props) => {
     return (
 
         <div>
-            <Navbar />
             <div className='user-details'>
 
                 <h2>{user.name}</h2>
