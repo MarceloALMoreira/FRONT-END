@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 import { IPostsLists } from "../../../interfaces/IPostsLists";
 import './posts.css'
+import listFetch from "../../../axios/config";
 
 const PostsLists = () => {
 
@@ -14,7 +15,7 @@ const PostsLists = () => {
 
     const getPosts = async () => {
         try {
-            const response = await axios.get("https://jsonplaceholder.typicode.com/posts/")
+            const response = await listFetch.get("posts/")
             const data = response.data
             setPosts(data)
         } catch (error) {

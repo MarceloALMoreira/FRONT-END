@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './uselist.css'
-import Navbar from '../../Home/Navbar';
 import { Link } from 'react-router-dom';
+import listFetch from '../../../axios/config';
 
 interface User {
     id: number;
@@ -17,7 +17,7 @@ const UserList = () => {
     const [users, setUsers] = useState<User[]>([]);
 
     useEffect(() => {
-        axios.get('https://jsonplaceholder.typicode.com/users')
+        listFetch.get('users')
             .then(response => setUsers(response.data))
             .catch(error => console.log(error));
     }, []);

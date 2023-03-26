@@ -30,3 +30,15 @@
     background-color: #0f52ba;
     color: #fff;
 }
+
+@media (max-width: 768px) {
+    .search {
+        background: none;
+    }
+
+    .search form {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+}

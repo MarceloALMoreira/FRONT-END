@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import './newposts.css'
+import listFetch from '../../../axios/config';
 
 interface FormData {
     title: string;
@@ -25,7 +26,7 @@ const NewPost = () => {
         };
 
         try {
-            await axios.post('https://jsonplaceholder.typicode.com/posts', postData);
+            await listFetch.post('posts', postData);
             // redirecionar para página principal após a criação do post
             window.location.replace('/');
         } catch (error) {

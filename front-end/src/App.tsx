@@ -7,12 +7,6 @@ import UserList from "./components/User/ListUsers"
 import NewPost from "./components/Home/Newposts"
 import Navbar from "./components/Home/Navbar"
 
-
-function MeuComponente() {
-  const match = useRouteMatch();
-}
-
-
 function App() {
 
 
@@ -23,8 +17,8 @@ function App() {
         <Route>
           <Route index element={< Home />} />
           <Route path="/users" element={< UserList />} />
-          <Route path='/users/:userId' element={< UserDetails userId={Number()} />} />
-          <Route path='/post/:postId/comments' element={< CommentsList postId={Number()} />} />
+          <Route path='/users/:userId' element={< UserDetails userId={Number(useParams())} />} />
+          <Route path='/post/:postId/comments' element={< CommentsList postId={Number(useParams())} />} />
           <Route path='/newpost' element={< NewPost />} />
 
         </Route>
@@ -32,9 +26,5 @@ function App() {
     </BrowserRouter >
   )
 }
-
 export default App
-function useRouteMatch() {
-  throw new Error("Function not implemented.")
-}
 

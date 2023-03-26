@@ -1,28 +1,24 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './details.css'
-import Navbar from '../../Home/Navbar';
-
-interface User {
-    id: number;
-    name: string;
-    username: string;
-    email: string;
-    phone: string;
-    website: string;
-}
-
-interface Props {
-    userId: number;
-}
+import { useParams } from 'react-router-dom';
+import { IUserDetails } from '../../../interfaces/IUserDetails';
+import { IUser } from '../../../interfaces/IUers';
+import listFetch from '../../../axios/config';
 
 
 
-const UserDetails = ({ userId }: Props) => {
-    const [user, setUser] = useState<User | null>(null);
+
+
+
+
+const UserDetails: React.FC<IUserDetails> = () => {
+    const [user, setUser] = useState<IUser | null>(null);
+    const params = useParams()
+    const userId = params.userId
 
     useEffect(() => {
-        axios.get(`https://jsonplaceholder.typicode.com/users/${userId}`)
+        listFetch.get(`/users/${userId}`)
             .then(response => setUser(response.data))
             .catch(error => console.log(error));
     }, [userId]);
@@ -35,8 +31,9 @@ const UserDetails = ({ userId }: Props) => {
 
         <div>
             <div className='user-details'>
-
                 <h2>{user.name}</h2>
+
+                <p><strong>Username:</strong> {user.id}</p>
                 <p><strong>Username:</strong> {user.username}</p>
                 <p><strong>E-mail:</strong> {user.email}</p>
                 <p><strong>Telefone:</strong> {user.phone}</p>
