@@ -30,8 +30,7 @@
 
 .Comment__email {
     font-style: italic;
-    display: flex;
-    color: #999;
+    font-size: 15px;
 }
 
 .Comment__body {
@@ -53,5 +52,11 @@
 
     .new_post {
         margin-top: 1rem;
+    }
+
+    .Comment__email {
+        font-style: italic;
+        font-size: 12px;
+
     }
 }
